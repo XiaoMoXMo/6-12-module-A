@@ -1,0 +1,392 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+input, button{
+    outline: none;
+    border: none;
+}
+
+
+@font-face {
+    font-family: pacifico;
+    src: url("./fonts/pacifico.woff");
+}
+
+@font-face {
+    font-family: ptsans;
+    src: url("./fonts/ptsans.woff");
+}
+
+html, body{
+    font-family: ptsans,sans-serif;
+    background-image: url("../imgs/bg.png");
+}
+
+.layout{
+    width: 970px;
+    margin: 0 auto;
+}
+
+.header{
+    background: black;
+    width:100%;
+    height: 40px;
+}
+
+.signout{
+    color: gray;
+    font-size: 12px;
+}
+
+.welcome{
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+    align-items: center;
+}
+.header-welcome{
+    height: 40px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title{
+    position: relative;
+}
+
+.title-block{
+    width: 100%;
+    height: 130px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+.title-choice{
+    color: red;
+    font-size: 15px;
+    margin: 0 25px;
+    padding-bottom: 10px;
+}
+
+.active{
+    border-bottom: 1px solid red;
+}
+.logo-name{
+    display: flex;
+    flex-flow: column;
+    font-size: 20px;
+    font-family: pacifico,sans-serif;
+    margin-left: 115px;
+    align-items: center;
+
+}
+
+.store-search{
+    margin-left: 70px;
+    background: rgba(0,0,0,0);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    color: lightgray;
+    height: 20px;
+    width: 250px;
+    padding-left: 5px;
+}
+
+.store-search:focus{
+    background: white;
+}
+
+.red-title{
+    width: 100%;
+    background: #cc3333;
+    box-shadow: inset 2px 2px 5px #000;
+}
+
+.red-title>.layout{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    color: white;
+}
+
+.red-title-left{
+    height: 150px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+}
+
+.red-title-right{
+    display: flex;
+    flex-flow: column;
+    height: 150px;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-to-cart{
+    height: 55px;
+    width: 220px;
+    color: #fff;
+    background: #c00327;
+    text-shadow: 1px 1px 1px #000;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 1px 2px #000;
+
+    /*background: #b23434;*/
+
+
+}
+
+.cart-stock{
+    font-size: 10px;
+    text-shadow: 1px 1px 1px #000;
+
+}
+
+.main-content>.layout{
+    display: flex;
+    flex-flow: row;
+}
+
+.content{
+    margin-top: 25px;
+    width: 720px;
+    margin-right: 30px;
+    display: flex;
+    flex-flow: column;
+}
+
+.discount>b{
+    display: flex;
+    flex-flow: row;
+    justify-content: left;
+}
+
+.about-rec{
+    width: 225px;
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+    font-size:25px;
+}
+
+.bach-pic{
+    display: block;
+    width: 225px;
+    height: 225px;
+    border-radius: 6px;
+    box-shadow: 2px 1px 5px #000;
+}
+
+.pic-in-text{
+    float: right;
+    margin:0 15px 15px 0;
+
+}
+
+
+.footer>.layout{
+    display: flex;
+    flex-flow: row;
+    height: 45px;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+
+.footer{
+    background: #000;
+
+    width: 100%;
+}
+
+.bottom-text{
+    font-size: 18px;
+}
+
+.more{
+    margin-top: 30px;
+    background: #cccccc;
+}
+.more>.layout{
+    height: 270px;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+}
+.more>.layout>div{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: column;
+}
+
+.bach-context{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #ccc url("../imgs/disc-cover.png") no-repeat center/cover;
+    background-blend-mode: overlay;
+    top: 0;
+    left: 0;
+    border-radius: 6px;
+    border: 1px solid rgba(0,0,0,0.3);
+    box-sizing: border-box;
+    transform: rotateY(180deg);
+    transition: all 4s;
+}
+
+.bach-card{
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+.bach-pic-trans{
+    transition: all 4s;
+    transform: translateZ(1px);
+}
+
+.bach-card:hover .bach-pic{
+    transform:  translateZ(-1px) rotateY(-180deg);
+}
+
+.bach-card:hover .bach-context{
+    transform: rotateY(0deg);
+}
+
+.content-context{
+    margin-top: 35px;
+}
+
+.content-context>p::selection{
+    background: #cc3333;
+    color: white;
+}
+
+.display-rows{
+    display: flex;
+    flex-flow: column;
+}
+
+.previews-title{
+    margin-top: 40px;
+    font-family: pacifico, sans-serif;
+    font-size: 30px;
+}
+
+.display-line{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.reviews-list{
+    display: flex;
+    flex-flow: column;
+    margin-top: 15px;
+}
+
+.review-list-item{
+    display: flex;
+    flex-flow: row;
+}
+
+.review-item{
+    color: #6f6f6f;
+}
+
+.review-list-item>img{
+    width: 50px;
+    height: 40px;
+}
+
+.review-item-first{
+    margin-left: 30px;
+    font-size: 20px;
+    padding-top: 20px
+}
+
+.review-item:last-child{
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 970px) {
+    .layout{
+        width: 98vw;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .title-choice,.title-block input{
+        display: none;
+    }
+    .logo-name{
+        margin: 0 auto;
+    }
+    .red-title-left > div:last-child{
+        font-size: 35px !important;
+    }
+    .red-title>.layout{
+        flex-flow: column;
+    }
+    .add-to-cart{
+        width: 100%
+    }
+    .red-title-right{
+        height: 100px;
+    }
+    .display-line{
+        flex-flow: column;
+    }
+    .main-content>.layout{
+        flex-flow: column;
+    }
+    .display-line{
+        margin-top: 10px;
+    }
+    .about-rec{
+        width: 100%;
+    }
+    .phone-flex{
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+    }
+    .recommand-phone>img{
+        margin-top: 3px !important;
+    }
+    .phone-more-choice{
+        display: block !important;
+        margin-top: 30px;
+    }
+    .ph-choice{
+        color: red;
+        margin-left: 30px;
+        font-size: 18px;
+    }
+    .display-line img{
+        width: 100%;
+        height: auto;
+    }
+    .line{
+        background: #cccccc;
+        height: 1px;
+        width: 100%;
+        margin-bottom: 10px;
+        margin-top:10px;
+    }
+
+    .content{
+        width: auto;
+    }
+}

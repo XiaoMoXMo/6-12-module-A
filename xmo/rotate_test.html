@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*.container, .back, .front{*/
+        /*    width: 30px;*/
+        /*    height: 40px;*/
+        /*    transform-style: preserve-3d;*/
+        /*    perspective: 1000px;*/
+        /*}*/
+
+        /*.container{*/
+        /*    position: relative;*/
+        /*}*/
+
+        /*.back{*/
+        /*    background: cornflowerblue;*/
+        /*    position: absolute;*/
+        /*}*/
+
+        /*.front{*/
+        /*    background: #cc3333;*/
+        /*    position: absolute;*/
+        /*}*/
+
+        /*.container:hover .container{*/
+        /*    transform: rotateY(180deg);*/
+        /*}*/
+
+        .front, .back, .container{
+            height: 100px;
+            width: 150px;
+        }
+
+        .front, .back{
+            height: 100px;
+            width: 150px;
+            position: absolute;
+        }
+
+        .back{
+            transform: rotateY(180deg);
+        }
+        .flipper{
+            transition: 0.6s;
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        .container{
+            transform-style: preserve-3d;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .container:hover .flipper{
+            transform: rotateY(180deg);
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="flipper">
+            <div class="back" style="background: red">
+
+
+            </div>
+
+            <div class="front" style="background: blue">
+
+            </div>
+
+        </div>
+
+
+    </div>
+</body>
+</html>
